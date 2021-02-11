@@ -33,16 +33,14 @@ jobs:
             unityVersion: 2019.4.19f1
             
         # Build
-          - name: Build project
-            uses: webbertakken/unity-builder@v0.10
-            with:
-              unityVersion: 2019.4.19f1
-              targetPlatform: WebGL
+        - name: Build project
+          uses: webbertakken/unity-builder@v0.10
+          with:
+            unityVersion: 2019.4.19f1
+            targetPlatform: WebGL
               
         # Output
-          - uses: actions/upload-artifact@v1
-            with:
-              name: Build
-              path: build
-    
-            
+        - uses: actions/upload-artifact@v1
+          with:
+            name: Build
+            path: build
